@@ -1,6 +1,6 @@
 {
   "name": "cmd-clip",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Executes a command, and copy to the clipboard the output",
   "main": "./dist/index.js",
   "type": "module",
@@ -36,6 +36,6 @@
     "clipboardy": "^3.0.0"
   },
   "files": [
-    "./dist/*"
+    "dist"
   ]
 }
