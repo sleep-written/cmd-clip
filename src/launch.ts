@@ -1,10 +1,10 @@
-import { exec } from './tool/exec/exec.js';
+import { exec } from './tool/exec/index.js';
 import clip from 'clipboardy';
 
-export async function main(): Promise<void> {
+export async function launch(): Promise<void> {
     const argv = process.argv.slice(2);
     const resp = await exec(argv);
-
+    
     if (resp.stdout) {
         const text = resp.stdout.toString('utf-8');
         await clip.write(text);
@@ -15,5 +15,3 @@ export async function main(): Promise<void> {
         throw new Error('No message printed by the command...');
     }
 }
-
-export default {}

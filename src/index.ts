@@ -1,10 +1,8 @@
 #!/usr/bin/env node
-import { main } from './main.js';
+import { launch } from './launch.js';
 
-main()
-    .then(() => {
-        console.log('cmd-clip -> [ OK ]: Command executed and copied!');
-    })
-    .catch(x => {
-        console.log('cmd-clip -> [FAIL]:', x.message);
-    });
+import { BleedBeliever } from '@bleed-believer/core';
+import { AppRoutingModule } from './app-routing.module.js';
+
+const app = new BleedBeliever(AppRoutingModule);
+app.bleed();

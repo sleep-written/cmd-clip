@@ -5,7 +5,7 @@
   "main": "./dist/index.js",
   "type": "module",
   "scripts": {
-    "test": "mocha --require ts-node/register ./src/**/*.test.ts"
+    "test": "mocha --loader=ts-node/esm --require ts-node/register ./src/**/*.test.ts"
   },
   "keywords": [
     "command",
@@ -31,6 +31,8 @@
     "cmd-clip": "./dist/index.js"
   },
   "dependencies": {
+    "@bleed-believer/command": "^0.0.4",
+    "@bleed-believer/core": "^0.0.4",
     "clipboardy": "^3.0.0"
   },
   "files": [

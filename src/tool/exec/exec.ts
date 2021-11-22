@@ -1,4 +1,4 @@
-import { ChildProcessWithoutNullStreams, spawn } from 'child_process';
+import { spawn } from 'child_process';
 import { ExecResult } from './exec-result';
 
 export function exec(argv: string[]): Promise<ExecResult> {
